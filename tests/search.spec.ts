@@ -1,23 +1,31 @@
 import { test, expect } from '@playwright/test';
 
 test('Search functionality works on ERR.ee', async ({ page }) => {
-	// Open the ERR.ee homepage
-	await page.goto('https://www.err.ee');
+	try {
+		console.log('Navigating to ERR.ee...');
+		await page.goto('https://www.err.ee');
 
-	// Locate the search bar and type a query
-	const searchInput = page.locator('.navbar-form input[placeholder="Otsi"]');
-	await searchInput.fill('Eesti');
+		console.log('Locating the search bar...');
+		const searchInput = page.locator('.navbar-form input[placeholder="Otsi"]');
+		await searchInput.fill('Eesti');
 
-	// Press Enter to search
-	await searchInput.press('Enter');
+		console.log('Submitting search...');
+		await searchInput.press('Enter');
 
-	// Wait for search results to appear
-	await page.waitForSelector('.search-content', { timeout: 5000 });
-	const results = page.locator('.real-fp-container');
-	await expect(results).toBeVisible();
+		console.log('Waiting for search results to appear...');
+		// Wait for search results to appear
+		await page.waitForSelector('.search-content', { timeout: 5000 });
+		const results = page.locator('.real-fp-container');
+		await expect(results).toBeVisible();
 
-	// Verify that at least one result is displayed
-	const resultItems = results.locator('.search-content');
-	const count = await resultItems.count();
-	expect(count).toBeGreaterThan(0);
+		console.log('Verifying search results...');
+		const resultItems = results.locator('.search-content');
+		const count = await resultItems.count();
+		expect(count).toBeGreaterThan(0);
+
+		console.log('Search test completed successfully.');
+	} catch (error) {
+		console.error('❌ Search test failed:', error);
+		throw error; // Ensure Playwright still fails the test properly
+	}
 });
