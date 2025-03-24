@@ -57,10 +57,9 @@ Here’s an overview of the project structure and its key components:
 # 2.1 Project Root
 ```python
 ├── tests/
-│   ├── search.test.ts                  # Test for the search functionality on the ERR.ee homepage
-│   ├── homepage-navigation.test.ts     # Test for navigation and menu functionality
-│   ├── article-navigation.test.ts      # Test for clicking on articles on the homepage
-│   └── utils.ts                        # Helper functions (if needed)
+│   ├── search.spec.ts                  # Test for the search functionality on the ERR.ee homepage
+│   ├── homepage-navigation.spec.ts     # Test for navigation and menu functionality
+│   ├── article-navigation.spec.ts      # Test for clicking on articles on the homepage                       # Helper functions (if needed)
 ├── package.json                        # Project dependencies and scripts
 ├── playwright.config.ts                # Configuration file for Playwright
 └── README.md                           # Project setup and usage instructions
