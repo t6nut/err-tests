@@ -32,7 +32,7 @@ test('Homepage navigation test on ERR.ee', async ({ page }) => {
 		// Check that the clicked section's title appears on the new page
 		console.log('Step 7: Verifying the section title on the new page');
 		const pageHeading = page.locator('header .category-name').first(); // Look for a heading on the new page
-		await expect(pageHeading).toContainText(new RegExp(linkText, 'i'));
+		await expect(pageHeading).toContainText(new RegExp(linkText.trim(), 'i'));
 
 	} catch (error) {
 		console.error('Error during homepage navigation test:', error);
