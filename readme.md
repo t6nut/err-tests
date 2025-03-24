@@ -59,7 +59,7 @@ Here’s an overview of the project structure and its key components:
 ├── tests/
 │   ├── search.spec.ts                  # Test for the search functionality on the ERR.ee homepage
 │   ├── homepage-navigation.spec.ts     # Test for navigation and menu functionality
-│   ├── article-navigation.spec.ts      # Test for clicking on articles on the homepage                       # Helper functions (if needed)
+│   ├── article-navigation.spec.ts      # Test for clicking on articles on the homepage
 ├── package.json                        # Project dependencies and scripts
 ├── playwright.config.ts                # Configuration file for Playwright
 └── README.md                           # Project setup and usage instructions
