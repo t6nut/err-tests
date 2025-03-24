@@ -61,6 +61,7 @@ Here’s an overview of the project structure and its key components:
 │   ├── homepage-navigation.spec.ts     # Test for navigation and menu functionality
 │   ├── article-navigation.spec.ts      # Test for clicking on articles on the homepage
 ├── package.json                        # Project dependencies and scripts
+├── package-lock.json                   # Project dependencies and scripts versions
 ├── playwright.config.ts                # Configuration file for Playwright
 └── README.md                           # Project setup and usage instructions
 ```
