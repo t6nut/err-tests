@@ -5,7 +5,7 @@ test('Search functionality works on ERR.ee', async ({ page }) => {
 		console.log('Navigating to ERR.ee...');
 		await page.goto('https://www.err.ee');
 
-		console.log('Locating the search bar...');
+		console.log('Locating the search bar & input search query...');
 		const searchInput = page.locator('.navbar-form input[placeholder="Otsi"]');
 		await searchInput.fill('Eesti');
 
