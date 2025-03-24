@@ -1,7 +1,7 @@
 Playwright Automated Tests for ERR.ee
 This repository contains Playwright automated tests for the ERR.ee website. The tests are designed to ensure that key functionality such as user interactions, navigation, and page content are working correctly across different scenarios.
 
-1. Instructions. Follow these steps to set up and run the Playwright automated tests:
+# 1. Instructions. Follow these steps to set up and run the Playwright automated tests:
 
 # 1.1 Prerequisites
 Before setting up the project, ensure you have the following installed:
@@ -13,8 +13,8 @@ npm (Comes with Node.js)
 # 1.2 Install Dependencies
 Clone the repository to your local machine:
 ```python
-git clone https://github.com/your-repo/playwright-automated-tests.git
-cd playwright-automated-tests
+git clone https://github.com/t6nut/err-tests.git
+cd err-tests
 ```
 
 Install the required dependencies:
@@ -51,7 +51,7 @@ npx playwright test --headed
 ```
 This opens the browser window during test execution.
 
-2. Projekti struktuuri selgitus (Project Structure Explanation)
+# 2. Project Structure Explanation
 Here’s an overview of the project structure and its key components:
 
 # 2.1 Project Root
